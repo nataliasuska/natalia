@@ -1,0 +1,5 @@
+python-dotenv
+pgeocode
+sendgrid==6.6.0
+Flask
+gunicorn
