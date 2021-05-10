@@ -37,7 +37,10 @@
         https://getbootstrap.com/docs/5.0/components/navbar/
     -->
     {% set nav_links = [
-      ('/about', 'about', 'About'),
+      ('/paintings', 'paintings', 'paintings'),
+      ('/drawings', 'drawings', 'drawings'),
+      ('/photography', 'photography', 'photography'),
+
     ] -%}
     {% set active_page = active_page|default('home') -%}
 
@@ -90,21 +93,21 @@
                 class="btn btn-link btn-floating btn-lg text-dark"
                 href="https://instagram.com/nat.museum"
                 role="button"
-                data-mdb-ripple-color="dark"
+                data-mdb-ripple-color="black"
                 ><i class="fab fa-instagram"></i
               ></a>
               <a
                 class="btn btn-link btn-floating btn-lg text-dark"
                 href="https://www.linkedin.com/in/nataliafsuska/"
                 role="button"
-                data-mdb-ripple-color="dark"
+                data-mdb-ripple-color="black"
                 ><i class="fab fa-linkedin"></i
               ></a>
               <a
                 class="btn btn-link btn-floating btn-lg text-dark"
                 href="https://github.com/nataliasuska"
                 role="button"
-                data-mdb-ripple-color="dark"
+                data-mdb-ripple-color="black"
                 ><i class="fab fa-github"></i
               ></a>
             </section>

@@ -8,11 +8,6 @@ def index():
     print("HOME PAGE")
     return render_template("home.html")
 
-@home_routes.route("/about")
-def about():
-    print("ABOUT NATALIA")
-    return render_template("about.html")
-
 @home_routes.route("/paintings")
 def paintings():
     print("PAINTINGS")
