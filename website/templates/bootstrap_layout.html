@@ -40,6 +40,8 @@
       ('/about', 'about', 'About'),
     ] -%}
     {% set active_page = active_page|default('home') -%}
+
+    <!-- navbar support from https://mdbootstrap.com/docs/standard/navigation/navbar/-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Natalia Suska</a>
@@ -48,14 +50,14 @@
             class="navbar-toggler" 
             type="button" 
             data-bs-toggle="collapse" 
-            data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" 
+            data-bs-target="#navbarCentered" 
+            aria-controls="navbarCentered" 
             aria-expanded="false" 
             aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCentered">
                 <ul class="navbar-nav">
                 {% for href, page_id, link_text in nav_links %}
                     {% if page_id == active_page %}
@@ -75,18 +77,42 @@
 
     <div class="container" style="margin-top:2em;">
 
-        <!--
-            PAGE CONTENTS
-        -->
         <div id="content">
             {% block content %}
             {% endblock %}
         </div>
 
-        <footer style="margin-top:2em; margin-bottom:2em;">
-        <hr>
-            &copy; Copyright 2021 Natalia Suska |
-            <a href="https://github.com/prof-rossetti/intro-to-python/blob/master/exercises/web-app/README.md">Source Code</a>
+<!-- modified from https://mdbootstrap.com/docs/standard/navigation/footer/-->
+        <footer class="text-center text-white" style="background-color: #f1f1f1;">
+            <div class="container pt-4">
+              <section class="mb-4">        
+                <a
+                class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://instagram.com/nat.museum"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://www.linkedin.com/in/nataliafsuska/"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://github.com/nataliasuska"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="fab fa-github"></i
+              ></a>
+            </section>
+
+        </div>    
+        <div class="text-center text-dark p-3">
+            &copy; Copyright 2021: Natalia Suska
+        </div>
 
         </footer>
     </div>
