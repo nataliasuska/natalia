@@ -12,3 +12,18 @@ def index():
 def about():
     print("ABOUT NATALIA")
     return render_template("about.html")
+
+@home_routes.route("/paintings")
+def paintings():
+    print("PAINTINGS")
+    return render_template("paintings.html")
+
+@home_routes.route("/drawings")
+def drawings():
+    print("DRAWINGS")
+    return render_template("drawings.html")
+
+@home_routes.route("/photography")
+def photography():
+    print("PHOTOGRAPHY")
+    return render_template("photography.html")
