@@ -3,36 +3,42 @@
 
 
 {% block content %}
-    <img src="\portfolio\cover.jpg" class="img-fluid" alt="Photo of Natalia">
+    <img src="https://github.com/nataliasuska/natalia/blob/main/website/templates/portfolio/cover.jpg?raw=true" class="img-fluid" alt="Photo of Natalia">
 
-    <h1>About Natalia</h1>
-
-    <p>Hi, my name is Natalia Suska and you have stumbled upon my webpage. 
-        I'm an undergraduate student at Georgetown University studying Operations & Analytics and Management.
-        I'm also minoring in Psychology, which is pretty fun.
-        At Georgetown I'm part of several clubs including: Hoyalytics, Innovo Consulting, McDonough Women, and JNET.
-        At Georgetown I have been involved with Hoya Hacks, the Georgetown Startup Intern Program, and the Georgetown Scholars Program.
-        This summer I'll be interning with a tech company in Seattle, and I'm pretty pumped about that.
-    </p>
-
-    <form>
-        <div class="mb-3">
-            <label for="Name" class="form-label">First and Last Name</label>
-            <input class="form-control" type="text" id="Name" aria-label="default input example">
-        </div>
-
-        <div class="mb-3">
-          <label for="Email" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="Email" placeholder="name@example.com" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-
-        <div class="mb-3">
-            <label for="Text" class="form-label">Message</label>
-            <textarea class="form-control" id="Text" rows="3"></textarea>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+              <h1>About Natalia</h1>
+              <p>Hi, my name is Natalia Suska and you have stumbled upon my webpage. 
+                I'm an undergraduate student at Georgetown University studying Operations & Analytics and Management.
+                I'm also minoring in Psychology, which is pretty fun.
+                At Georgetown I'm part of several clubs including: Hoyalytics, Innovo Consulting, McDonough Women, and JNET.
+                At Georgetown I have been involved with Hoya Hacks, the Georgetown Startup Intern Program, and the Georgetown Scholars Program.
+                This summer I'll be interning with a tech company in Seattle, and I'm pretty pumped about that.
+              </p>
           </div>
-                
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+          <div class="col">
+              <h3>Contact Me</h3>
+              <form>
+                    <div class="mb-3">
+                        <label for="Name" class="form-label">First and Last Name</label>
+                        <input class="form-control" type="text" id="Name" aria-label="default input example">
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="Email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="Email" placeholder="name@example.com" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Text" class="form-label">Message</label>
+                        <textarea class="form-control" id="Text" rows="3"></textarea>
+                    </div>
+                            
+                    <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+          </div>
+        </div>
+    </div>
 
 {% endblock %}
