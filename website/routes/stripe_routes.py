@@ -5,11 +5,12 @@ Stripe Sample.
 Python 3.6 or newer required.
 """
 import os
-from flask import Flask, jsonify, request
-
+from flask import Blueprint, render_template, flash, Flask, jsonify, request, redirect
+from dotenv import load_dotenv
 import stripe
 
 
+load_dotenv()
 
 STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY", default="PK_OOPS") # client-side
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", default="SK_OOPS") # server-side
