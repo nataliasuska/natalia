@@ -37,4 +37,4 @@ if __name__ == '__main__':
 @home_routes.route("/book")
 def book():
     print("BOOK A PHOTOSHOOT")
-    return render_template("book.html")
+    return render_template("checkout.html")

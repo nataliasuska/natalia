@@ -19,7 +19,7 @@ app = Flask(__name__,
             static_url_path='',
             static_folder='.')
 
-YOUR_DOMAIN = 'https://nataliasuska.herokuapp.com/'
+YOUR_DOMAIN = 'https://nataliasuska.herokuapp.com/checkout'
 
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
