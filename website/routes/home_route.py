@@ -33,3 +33,8 @@ def result():
         return render_template("result.html", result = result)
 if __name__ == '__main__':
     home_routes.run(debug = True)
+
+@home_routes.route("/book")
+def book():
+    print("BOOK A PHOTOSHOOT")
+    return render_template("book.html")

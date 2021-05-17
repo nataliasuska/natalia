@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book a photoshoot with me</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <section>
+      <div class="product">
+        <img
+          src="https://github.com/nataliasuska/natalia/blob/main/website/templates/portfolio/cover.jpg?raw=true" 
+          alt="Photoshoot with Natalia"
+        />
+        <div class="description">
+          <h3>1-Hour Photoshoot with Natalia</h3>
+          <h5>$65.00</h5>
+        </div>
+      </div>
+      <button type="button" id="checkout-button">Checkout</button>
+    </section>
+  </body>
+  <script type="text/javascript">
+    var STRIPE_PK = '{{ stripe_pk }}' // python variable to JS string
+    var stripe = Stripe(STRIPE_PK)    
+    var checkoutButton = document.getElementById("checkout-button");
+
+    checkoutButton.addEventListener("click", function () {
+      fetch("/create-checkout-session", {
+        method: "POST",
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (session) {
+          return stripe.redirectToCheckout({ sessionId: session.id });
+        })
+        .then(function (result) {
+          if (result.error) {
+            alert(result.error.message);
+          }
+        })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
+    });
+  </script>
+</html>
