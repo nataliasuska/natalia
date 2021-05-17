@@ -11,7 +11,7 @@ stripe_routes = Blueprint("stripe_routes", __name__)
 
 load_dotenv()
 
-APP_DOMAIN = os.getenv("APP_DOMAIN", default="https://nataliasuska.herokuapp.com/")
+APP_DOMAIN = os.getenv("APP_DOMAIN", default="https://nataliasuska.herokuapp.com")
 SUCCESS_URL = f"{APP_DOMAIN}/stripe/checkout-session/callback/success" # must match route defined below
 CANCEL_URL = f"{APP_DOMAIN}/stripe/checkout-session/callback/cancel" # must match route defined below
 
@@ -73,5 +73,5 @@ def callback_success():
 def callback_cancel():
     """Triggers if the user gets to the stripe checkout and then presses the back button there (not the browser back button) """
     print("CHECKOUT CANCELED")
-    flash("Payment Canceled. Are you sure?", "warning")
+    flash("Payment Canceled.", "warning")
     return redirect("/")
