@@ -5,8 +5,10 @@ Stripe Sample.
 Python 3.6 or newer required.
 """
 import os
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, redirect
+from dotenv import load_dotenv
 
+load_dotenv()
 import stripe
 
 
