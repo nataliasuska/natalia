@@ -26,23 +26,43 @@
           </div>
           <div class="col">
               <h3>Contact Me</h3>
-              <form>
+              <form action="/home" name="sentMessage" method="post" class="contactForm" novalidate>
+                <div class="row">
+                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="errormessage"></div>
+        
+                   <div class="mb-3">
+                    <div class="form-group contact-block1">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        <div class="validation"></div>
+                    </div>
+                   </div>
+
                     <div class="mb-3">
-                        <label for="Name" class="form-label">First and Last Name</label>
-                        <input class="form-control" type="text" id="Name" aria-label="default input example">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
                     </div>
 
                     <div class="mb-3">
-                    <label for="Email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="Email" placeholder="name@example.com" aria-describedby="emailHelp">
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                          <div class="validation"></div>
+                        </div>
                     </div>
-
+                  
                     <div class="mb-3">
-                        <label for="Text" class="form-label">Message</label>
-                        <textarea class="form-control" id="Text" rows="3"></textarea>
+                         <div class="form-group">
+                           <textarea class="form-control" name="message" rows="8" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                           <div class="validation"></div>
+                         </div>
                     </div>
-                            
-                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                  
+                    <div class="mb-3">
+                         <input type="submit" class="btn btn-outline-primary btn-send" value="Send message">
+                    </div>    
+                </div> 
               </form>
           </div>
         </div>
