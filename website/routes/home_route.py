@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, Flask, request, smtplib
+import os
 
 home_routes = Blueprint("home_routes", __name__)
 
