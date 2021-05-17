@@ -38,7 +38,7 @@ export FLASK_APP=website
 flask run
 ```
 
-## [Deploying](/DEPLOYING.md)
+## [Deploying]()
 
 Follow the deployment instructions to deploy your own website to a remote server.
 
