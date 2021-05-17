@@ -26,13 +26,24 @@
           </div>
           <div class="col">
               <h3>Contact Me</h3>
-                 <form action="https://formsubmit.co/nataliasuska01@email.com" method="POST">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <input type="hidden" name="_subject" value="Subject">
-                    <input type="text" name="name" placeholder="Write message here." required>
-                    <button type="submit">Send Message</button>
-                 </form>
+              <form action="" method="POST">
+                <div class="mb-3">
+                    <label for="Name" class="form-label">First and Last Name</label>
+                    <input class="form-control" type="text" name="name" value={{request.form.name}} id="Name" aria-label="default input example">
+                </div>
+
+                <div class="mb-3">
+                    <label for="Email" class="form-label">Email address</label>
+                    <input type="email" class="form-control"  name="email" value={{request.form.email}} id="Email" placeholder="name@example.com" aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="Text" class="form-label">Message</label>
+                    <textarea class="form-control"  name="text" value={{request.form.text}} id="Text" rows="3"></textarea>
+                </div>
+                        
+                <button type="submit" class="btn btn-outline-primary">Submit</button>
+          </form>
           </div>
         </div>
     </div>
