@@ -28,7 +28,7 @@ def checkout_page():
         "price_usd": "$65.00",
         "img":{"url": "https://github.com/nataliasuska/natalia/blob/main/website/templates/portfolio/cover.jpg?raw=true", "alt": "The cover of my book"}
     } # todo: fetch product(s) from stripe
-    return render_template("stripe_checkout.html", stripe_pk=STRIPE_PUBLIC_KEY, product=PRODUCT)
+    return render_template("checkout.html", stripe_pk=STRIPE_PUBLIC_KEY, product=PRODUCT)
 
 @stripe_routes.route("/stripe/checkout-session/create", methods=["POST"])
 def create_checkout_session():

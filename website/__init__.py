@@ -3,6 +3,8 @@ import os
 from dotenv import load_dotenv
 
 from website.routes.home_route import home_routes
+from website.routes.stripe_routes import stripe_routes
+
 
 load_dotenv()
 
