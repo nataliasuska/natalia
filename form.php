@@ -13,15 +13,16 @@ if(empty($name)||empty($email)
 {echo "Name and email are required!";
 exit}
 
-$email_from = 'nataliasuska01@gmail.com';
+$email_from = os.getenv("EMAIL");
 $email_subject = "Art Commission";
 $email_body = "You have a new message from the user $name.\n".
     "Email Address: $email\n".
     "Here is the message:\n $message".
 
-$to = "nataliasuska01@gmail.com";
+$to = os.getenv("EMAIL");
 $headers = "From: $email_from \r\n";
 
+//code from https://html.form.guide/email-form/php-form-to-email/
 function IsInjected($str)
 {
     $injections = array('(\n+)',
