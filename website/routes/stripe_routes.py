@@ -52,6 +52,10 @@ def create_checkout_session():
             mode="payment",
             payment_method_types=["card"],
             line_items=line_items
+            #client_reference_id="", # A unique string to reference the Checkout Session. This can be a customer ID, a cart ID, or similar, and can be used to reconcile the session with your internal systems.
+            #customer_email="hello@example.com", # If provided, this value will be used when the Customer object is created. If not provided, customers will be asked to enter their email address.
+            #discount=[{"type": "coupon", "___": "____"}]
+            #submit_type="book", # "auto", "pay", "book", "donate"
         )
         return jsonify({"id": checkout_session.id})
     except Exception as e:
