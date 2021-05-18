@@ -44,7 +44,8 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Web App
+### Web App and Testing
+You may choose to run this website locally. I have configured mine with Heroku so that anyone could reach it. However it's a good test to do so locally. Just run this command in your terminal(after installing requirements):
 
 ```
 # mac:
@@ -117,4 +118,4 @@ That's it!
 
 #### Note
 This [repo is configured](https://codeclimate.com/github/nataliasuska/natalia) with Code Climate service. 
-However, though I didn't integrate with Travis CI and don't have a 'test' folder, I did complete local website hosting tests before deployment onto Heroku. 
+However, though I didn't integrate with Travis CI and don't have a 'test' folder, I did complete local website hosting tests before and even during deployment onto Heroku. It's what worked with my website, given that it is mostly HTML for my user's needs. 
