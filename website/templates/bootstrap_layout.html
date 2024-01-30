@@ -86,15 +86,16 @@
             <button 
             class="navbar-toggler" 
             type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarCentered" 
+            data-toggle="collapse" 
+            data-target="#collapsibleNavbar" 
             aria-controls="navbarCentered" 
             aria-expanded="false" 
             aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
+                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navbarCentered">
+            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                
                     {% for href, page_id, link_text in nav_links %}
